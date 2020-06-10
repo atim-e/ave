@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  /* font-family: "Open Sans", Helvetica, sans-serif; */
+}
+
+
+@font-face {
+  font-family: "Nunito Bold";
+  src: url("./fonts/Nunito-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito Regular";
+  src: url("./fonts/Nunito-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito Light";
+  src: url("./fonts/Nunito-Light.ttf") format("truetype");
+}
+
+/* CSS FOR HEADER STARTS HERE */
+
+.navbar {
+  /* border: 1px solid black; */
+  background-color: #ffffff;
+  height: 75px;
+  width: 95%;
+  display: flex;
+  margin: auto;
+  padding: 10px;  
+}
+
+/* .sticky { */
+  /* position: fixed; */
+  /* top: 0; */
+  /* width: 100% */
+ 
+.nav-items {
+  display: flex;
+  z-index: 9999;
+}
+
+.nav-link a {
+  padding-right: 8px;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Nunito Regular", sans-serif; 
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  color: #707070;;
+}
+
+.nav-items-right {
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.navbar-Toggle {
+  display: none;
+}
+
+a:hover {
+  color: #06A7DF;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar,
+  .nav-items {
+    flex-direction: column;
+  }
+
+  .nav-items-right {
+    margin-left: 0;
+    display: none;
+  }
+
+  .navbar-Toggle {
+    /* margin: auto 0; */
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+    color: #f4821e;
+    font-size: 35px;
+    margin: auto -15px;
+  }
+
+  .nav-link a {
+    background-color: rgba(0, 0, 0, 0.089);
+    color: #F4821E;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Nunito Regular", sans-serif;
+    display: block;
+  }
+
+
+
+}
+
+/* CSS FOR HEADER ENDS HERE */
+
+
+
+/* the image gallery */
+.image-gallery {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* to hide the images by default */
+.slide {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Add trasparent background on hover */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption*/
+.caption {
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+
+/*form in the GALLERY begins*/
+.form-holder {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 15px;
+  width: 80%;
+  margin: 0 10%;
+  border-radius:30px 30px 30px 30px;
+}
+.curved{
+padding: 15px;
+width: 25%;
+background-color: white;
+}
+.box{
+padding: 15px;
+width: 25%;
+margin: 0 1px;
+background-color: white;
+}
+.left {
+  border-radius:30px 0px 0px 30px;
+  border-color: white;
+}
+.right{
+  border-radius:0px 30px 30px 0px;
+  background-color: #F4821E;
+}
+.dropdown{
+  border-color: white; 
+}
+form p{
+  color: black;
+}
+/*FORM IN THE GALLERY*/
+
+/*Css for the form*/
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  height: auto !important;
+}
+.the-form {
+  width: 460px;
+  padding: 1em 2em;
+  background:  rgb(243, 243, 243);
+  border-radius: 4px;
+  border: 1px solid  rgb(243, 243, 243);
+}
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  width: 100%;
+  height: auto !important;
+}
+.first-name {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em 2em;
+  background:  rgb(243, 243, 243);
+  border-radius: 4px;
+  border: 1px solid  rgb(243, 243, 243);
+  color: black;
+  margin-right: 20px;
+}
+.last-name {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em 2em;
+  background:  rgb(243, 243, 243);
+  border-radius: 4px;
+  border: 1px solid  rgb(243, 243, 243);
+  color: black;
+  padding-right: 20px;
+}
+.subject {
+  width: 460px;
+  padding: 1em 2em;
+  background: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
+  height: 200px;
+}
+.submit {
+  display: flex;
+  padding: 1em 2em;
+  background-color:rgba(255, 166, 0, 0.897);
+  border: 1px solid rgba(255, 166, 0, 0.897);
+  color: white;
+  flex-wrap: wrap;
+  margin-left: 800px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+/*  FORM ENDS HERE*/
+
+
+/* ROOMS CARD SECTION*/
+.rooms-card-holder {
+  width: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Room Card */
+.rooms-card-holder img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 61px;
+}
+
+.room-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.room-card h2 {
+  padding-bottom: 1rem;
+  font-weight: 900;
+  font-family: "Nunito Bold";
+  text-transform: uppercase;
+}
+
+.card-image {
+  height: 100%;
+  padding-right: 1rem;
+}
+
+.card-content {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-content div {
+  width: 50%;
+}
+
+.card-info h2 {
+  font-size: 1.563rem;
+  line-height: 2.125rem;
+  color: #f4821e;
+}
+
+.card-info p {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  color: #707070;
+  font-family: "Nunito Regular"
+}
+
+.card-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card-price h2 {
+  font-size: 1.875rem;
+  line-height: 2.563rem;
+  color: #707070;
+}
+
+.card-price button {
+  border: none;
+  color: #ffffff;
+  background: #06a7df;
+  width: 184px;
+  height: 57px;
+  font-size: 1.375rem;
+  line-height: 1.875;
+  transition: 0.4s;
+  cursor: pointer;
+  font-family: "Nunito Light";
+}
+
+.card-price button:hover {
+  opacity: 0.9;
+}
+
+/* Room Card End */
